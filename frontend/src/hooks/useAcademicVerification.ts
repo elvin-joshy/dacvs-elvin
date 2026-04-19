@@ -1,6 +1,6 @@
 import { ethers } from 'ethers';
-import AcademicVerificationArtifact from '../../../blockchain/academic-verifier/artifacts/contracts/AcademicVerification.sol/AcademicVerification.json';
-import Deployments from '../../../blockchain/academic-verifier/deployments/sepolia.json';
+import AcademicVerificationArtifact from '../contracts/AcademicVerification.json';
+import Deployments from '../contracts/sepolia.json';
 
 const CONTRACT_ADDRESS = Deployments.AcademicVerification;
 const ABI = AcademicVerificationArtifact.abi;

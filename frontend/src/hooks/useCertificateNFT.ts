@@ -1,6 +1,6 @@
 import { ethers } from 'ethers';
-import CertificateNFTArtifact from '../../../blockchain/academic-verifier/artifacts/contracts/CertificateNFT.sol/CertificateNFT.json';
-import Deployments from '../../../blockchain/academic-verifier/deployments/sepolia.json';
+import CertificateNFTArtifact from '../contracts/CertificateNFT.json';
+import Deployments from '../contracts/sepolia.json';
 
 const CONTRACT_ADDRESS = Deployments.CertificateNFT;
 const ABI = CertificateNFTArtifact.abi;
