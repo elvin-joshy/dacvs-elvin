@@ -1,0 +1,23 @@
+{
+  "name": "dacvs",
+  "version": "1.0.0",
+  "description": "![Solidity](https://img.shields.io/badge/Solidity-e6e6e6?style=for-the-badge&logo=solidity&logoColor=black) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white) ![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=ethereum&logoColor=white)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"cd ai-engine && python main.py\" \"cd backend && node src/server.js\" \"cd frontend && npm run dev\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akrishnamadhav/DACVS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akrishnamadhav/DACVS/issues"
+  },
+  "homepage": "https://github.com/Akrishnamadhav/DACVS#readme",
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

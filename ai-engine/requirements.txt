@@ -1,0 +1,21 @@
+Flask==3.0.3
+Flask-Cors==4.0.0
+# Pillow 10.4.0 fixes KeyError: '__version__' build failure
+Pillow==10.4.0
+# numpy < 2.0.0 is required for compatibility with many AI libraries
+numpy<2.0.0
+
+# CPU-only PyTorch (no GPU on Render free tier, much smaller wheels ~200MB vs ~800MB)
+# Using PyTorch's own wheel index so pip always finds a matching CPU build
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.4.0+cpu
+torchvision==0.19.0+cpu
+torchaudio==2.4.0+cpu
+
+easyocr==1.7.1
+opencv-python-headless==4.10.0.84
+PyMuPDF==1.24.9
+
+# Production WSGI server (required for Render)
+gunicorn==21.2.0
+
