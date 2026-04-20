@@ -23,6 +23,7 @@ const institutionRoutes = require('./routes/institutions');
 const verifyRoutes = require('./routes/verify');
 
 const app = express();
+app.set('trust proxy', 1); // Trust Render's proxy to get real client IPs
 
 // Initialize DB and Blockchain Read connections
 connectDB();
