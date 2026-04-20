@@ -20,7 +20,7 @@ export default function AuthWallet() {
       // 1. Request accounts
       const provider = new ethers.BrowserProvider(window.ethereum);
       const accounts = await provider.send("eth_requestAccounts", []);
-      const address = accounts[0];
+      const address = accounts[0].toLowerCase(); // IMPORTANT: backend stores addresses lowercase
 
       // 2. Fetch Nonce from backend
       const resNonce = await api.post('/auth/nonce', { walletAddress: address });
@@ -51,8 +51,9 @@ export default function AuthWallet() {
       }
 
     } catch (err: any) {
-      console.error(err);
-      toast.error(err?.response?.data?.error || 'Authentication denied or failed.');
+      console.error('Auth error:', err?.response?.data || err?.message || err);
+      const msg = err?.response?.data?.error || err?.message || 'Authentication failed. Check console for details.';
+      toast.error(msg, { duration: 6000 });
     } finally {
       setLoading(false);
     }
